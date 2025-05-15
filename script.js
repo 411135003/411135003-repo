@@ -26,7 +26,7 @@ async function getAIResponse(message) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer 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"  // 請把這裡換成你剛才複製的完整 API Key
+        "Authorization": "Bearer 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"  // 請把這裡換成你剛才複製的完整 API Key
       },
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
