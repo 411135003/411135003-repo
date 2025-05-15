@@ -1,16 +1,58 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>我的網站 Demo</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>AI 助理 DEMO</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    .chat-box {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .msg {
+      margin: 10px 0;
+    }
+    .user { color: #007bff; }
+    .ai { color: #28a745; }
+    #input-area {
+      display: flex;
+      margin-top: 20px;
+    }
+    input[type="text"] {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello World</h1>
-  <p>這是一個簡單的前端專案。</p>
-  <button onclick="sayHello()">點我</button>
+  <div class="chat-box">
+    <h2>🤖 AI 助理 DEMO</h2>
+    <div id="chat"></div>
+
+    <div id="input-area">
+      <input type="text" id="userInput" placeholder="請輸入你的問題..." />
+      <button onclick="sendMessage()">送出</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
