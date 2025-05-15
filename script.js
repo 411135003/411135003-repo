@@ -26,7 +26,7 @@ async function getAIResponse(message) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "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" // ⚠️ 把這裡換成你的 OpenAI API 金鑰
+        "Authorization": "Bearer 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"  // 請把這裡換成你剛才複製的完整 API Key
       },
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
@@ -35,8 +35,17 @@ async function getAIResponse(message) {
     });
 
     const data = await response.json();
+
+    if (!response.ok) {
+      console.error("API 回應錯誤：", data);
+      return `錯誤：${data.error?.message || '未知錯誤'}`;
+    }
+
     return data.choices[0].message.content.trim();
   } catch (error) {
+    console.error("請求失敗：", error);
     return "發生錯誤，請稍後再試。";
   }
 }
+
+
