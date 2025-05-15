@@ -26,7 +26,7 @@ async function getAIResponse(message) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer 你的API金鑰" // ⚠️ 把這裡換成你的 OpenAI API 金鑰
+        "Authorization": "Bearer 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" // ⚠️ 把這裡換成你的 OpenAI API 金鑰
       },
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
